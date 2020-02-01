@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Asap+Condensed|Bungee+Inline|Changa+One|Contrail+One|Encode+Sans|Oswald');
+
+body {
+    background-color: linen;
+}
+
+tbody {
+    display:block;
+    height:700px;
+    overflow:auto;
+}
+
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;/* even columns width , fix width of table too*/
+}
+
+thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+h1 {
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 4em;
+	color: dimgray;
+	text-align: center;
+}
+
+h2 {
+    font-family: 'Changa One', sans-serif;
+    font-size: 2.5em;
+	color: pink;
+	text-align: center;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4em;
+	color: purple;
+	text-align: center;
+}
+
+p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+	color: blue;
+	text-align: center;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" sizes="192x192"  href="static/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="static/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <link rel="manifest" href="/staticmanifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <script src="jquery-3.3.1.js"></script>
+  </head>
+
+{% extends "bootstrap/base.html" %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+
+{% block title %}
+    OEE Mock Simulator v0.1
+{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top"></div>
+    <!--...-->
+</div>
+{% endblock %}
+
+{% block content %}
+    <h1>Congratulations! You just built one of these bad boys!?</h1>
+    <div class="container" style="border:50px outset darkslategray">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <img class="img-responsive center-block" src="/static/robot1_blue.png" alt="Blue robot">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+</html>

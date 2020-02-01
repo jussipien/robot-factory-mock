@@ -1,0 +1,76 @@
+.scroll-left {
+     height: 325px;
+     position: relative;
+     overflow: hidden;
+}
+.scroll-left .inner {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(65%);
+ /* Apply animation to this element */
+ animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(65%);
+ }
+ 100% {
+ transform: translateX(-65%);
+ }
+}
+
+.scroll-left-small {
+     height: 80px;
+     position: relative;
+     overflow: hidden;
+}
+
+.scroll-left-small .inner{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(65%);
+ /* Apply animation to this element */
+ animation: scroll-left 3s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left-small {
+ 0%   {
+ transform: translateX(65%);
+ }
+ 100% {
+ transform: translateX(-65%);
+ }
+}
+
+.scroll-left-small .inner-1 {
+     animation: scroll-left 3s linear infinite;
+    }
+
+.scroll-left-small .inner-2 {
+     animation: scroll-left 4s linear infinite;
+    }
+
+.scroll-left-small .inner-3 {
+     animation: scroll-left 5s linear infinite;
+    }
+
+.scroll-left-small .inner-4 {
+     animation: scroll-left 4s linear infinite;
+    }
+
+.scroll-left-small .inner-5 {
+     animation: scroll-left 6s linear infinite;
+    }
+
+.scroll-left-small .inner-6 {
+     animation: scroll-left 2s linear infinite;
+    }

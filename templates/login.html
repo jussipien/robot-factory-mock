@@ -1,0 +1,100 @@
+<!--
+const button = document.getElementById('post-btn');
+        button.addEventListener('click', async _ => {
+          try {
+            const response = await fetch('/login', {
+              method: 'post',
+              body: {
+                // Your body
+              }
+            });
+            console.log('Completed!', response);
+          } catch(err) {
+            console.error(`Error: ${err}`);
+          }
+        });
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" sizes="192x192"  href="static/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="static/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <link rel="manifest" href="/staticmanifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <script
+          src="https://code.jquery.com/jquery-3.4.0.js"
+          integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+          crossorigin="anonymous"></script>
+    <script>
+         var image_number = 0;
+         images = [];
+         images[0] = "/static/robot1_blue.png";
+         images[1] = "/static/robot2_green.png";
+         images[2] = "/static/robot3_yellow.png";
+         images[3] = "/static/robot4_orange.png";
+         images[4] = "/static/robot5_red.png";
+         images[5] = "/static/robot6_purple.png";
+         var rand = Math.floor(Math.random() * images.length);
+
+         var random_image = images[rand];
+
+         function place_image() {
+            document.write('<img "class=center-block" src="' + random_image + '" alt="Robot" width="40%">');
+         }
+    </script>
+  </head>
+
+{% extends "bootstrap/base.html" %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+
+{% block title %}
+    OEE Mock Simulator v0.1 Login Page
+{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-fixed-top"></div>
+    <!--style="border:50px outset darkslategray; background-color: silver"-->
+</div>
+{% endblock %}
+
+{% block content %}
+    <h1>Login</h1>
+    <div class="container" style="border: 1.5em solid black; background-color: lightyellow">
+        {% if request.length != 0 %}
+            <p>{{ message}} </p>
+        {% endif %}
+       <form id="login-form" action="/login" method="post">
+            <div class="form-group">
+                <label for="inputUsername">Username</label>
+                <input name="username" type="text" class="form-control" id="inputUsername" placeholder="Enter username">
+        </div>
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input name="password" type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <input name="submit" type="submit" class="btn btn-primary text/center" value="Login">
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <script>place_image();</script>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+</html>
